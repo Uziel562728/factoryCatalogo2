@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Telas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>• Factory •</h1>
+      <p class="subtitle">Descubre el Verano 2026.</p>
+      <p>Lino Sastrero | Morley Suede | Wafle | Lino Rayado | CEY</p>
+      <p style="margin-top: 5px;">
+        Encontranos en: 
+        <a href="https://maps.google.com/?cid=8707056725779467481&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" target="_blank">
+          Bacacay 3013
+        </a>
+      </p>
+      <!-- Botón WhatsApp con desplegable de números -->
+<div class="whatsapp-dropdown" tabindex="0" aria-haspopup="true" aria-expanded="false">
+  <div class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.67-1.611-.916-2.203-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.075-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.26.489 1.69.625.71.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347z"/>
+    </svg>
+    Contactar por WhatsApp
+  </div>
+  <div class="whatsapp-dropdown-content" role="menu">
+    <a href="https://wa.me/5491166182006" target="_blank" rel="noopener noreferrer" role="menuitem">+54 9 11 6618-2006</a>
+    <a href="https://wa.me/5491157498970" target="_blank" rel="noopener noreferrer" role="menuitem">+54 9 11 5749-8970</a>
+  </div>
+</div>
+
+    </header>
+
+  <!-- Carrusel personalizado -->
+<section class="carousel">
+  <!-- Imágenes del carrusel -->
+  <img src="https://i.ibb.co/TDyfbTRj/Imagen-de-Whats-App-2025-07-31-a-las-16-16-24-2e57004c.jpg" alt="Lino Sastrero" class="active" />
+  <img src="https://i.ibb.co/vKF1pWp/Imagen-de-Whats-App-2025-07-31-a-las-16-19-13-89971266.jpg" alt="Morley Suede" />
+  <img src="https://i.ibb.co/4w6cq18g/Imagen-de-Whats-App-2025-07-31-a-las-16-16-09-bbcf0581.jpg" alt="Wafle" />
+
+  <!-- Indicadores para cada imagen -->
+  <div class="indicators" style="text-align:center; margin-top: 10px;">
+    <span class="indicator active" onclick="currentSlide(1)"></span>
+    <span class="indicator" onclick="currentSlide(2)"></span>
+    <span class="indicator" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- Flechas para navegación -->
+  <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+  <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+
+  <!-- Contenedor con info y botón -->
+  <div class="info product-info">
+    <h3 id="product-name">Lino Sastrero</h3>
+    <p id="product-description">
+      Elegante y fresco, el lino sastrero combina la naturalidad del lino con la estructura ideal para prendas formales de verano. Ideal para trajes livianos, blazers y pantalones con caída impecable.
+    </p>
+    <button class="contact-btn" onclick="enviarConsultaConNombre('Lino Sastrero')">Consultar</button>
+  </div>
+</section>
+
+
+    <hr class="divider" />
+
+    <div class="search-container">
+        <input type="text" id="fabricSearch" placeholder="Buscar telas..." />
+      </div>
+    
+    <!-- Grid de tarjetas con las telas nuevas sin precios -->
+    <section class="catalog-grid">
+<div class="whatsapp-float-dropdown">
+  <button class="whatsapp-float-btn" aria-haspopup="true" aria-expanded="false" aria-controls="whatsappOptions" id="whatsappBtn">
+    <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" width="24" height="24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.67-1.612-.916-2.204-.242-.579-.487-.5-.67-.51-.173-.007-.371-.009-.57-.009s-.52.074-.792.371c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path>
+    </svg>
+  </button>
+  <ul class="whatsapp-float-dropdown-content" id="whatsappOptions" role="menu" aria-labelledby="whatsappBtn">
+    <li role="none">
+      <a href="https://wa.me/5491166182006" target="_blank" role="menuitem" rel="noopener noreferrer">+54 9 11 6618-2006</a>
+    </li>
+    <li role="none">
+      <a href="https://wa.me/5491157498970" target="_blank" role="menuitem" rel="noopener noreferrer">+54 9 11 5749-8970</a>
+    </li>
+  </ul>
+</div>
+
+      <!-- Lino Sastrero -->
+      <article class="fabric-card">
+        <div class="fabric-slider">
+          <img src="https://i.ibb.co/TDyfbTRj/Imagen-de-Whats-App-2025-07-31-a-las-16-16-24-2e57004c.jpg" alt="Lino Sastrero" class="slider-img active" />
+          <img src="https://i.ibb.co/WvM7s4LG/file-0000000006d461fd8ba167a71358d1e9.png" alt="Lino Sastrero 2" class="slider-img" />
+          <img src="https://i.ibb.co/prjy8ng5/file-0000000014f8622f88ede3c198f240fc.png" alt="Lino Sastrero 3" class="slider-img" />
+        </div>
+        <h4 class="fabric-name">Lino Sastrero</h4>
+        <p class="fabric-description">
+          Elegante y fresco, el lino sastrero combina la naturalidad del lino con la estructura ideal para prendas formales de verano. Ideal para trajes livianos, blazers y pantalones con caída impecable.
+        </p>
+        <button class="contact-btn" data-name="Lino Sastrero">Consultar</button>
+      </article>
+
+      <!-- Morley Suede -->
+      <article class="fabric-card">
+        <div class="fabric-slider">
+          <img src="https://i.ibb.co/vKF1pWp/Imagen-de-Whats-App-2025-07-31-a-las-16-19-13-89971266.jpg" alt="Morley Suede" class="slider-img active" />
+          <img src="https://i.ibb.co/fGFqNq0g/file-00000000202c61f592b7ac1443c9cd08.png" alt="Morley Suede adicional" class="slider-img" />
+        </div>
+        <h4 class="fabric-name">Morley Suede</h4>
+        <p class="fabric-description">
+          Tela con textura acanalada tipo morley y acabado tipo gamuza. Suave, elástica y elegante, ideal para prendas modernas, cómodas y con un toque sofisticado.
+        </p>
+        <button class="contact-btn" data-name="Morley Suede">Consultar</button>
+      </article>
+
+      <!-- Wafle -->
+      <article class="fabric-card">
+        <div class="fabric-slider">
+          <img src="https://i.ibb.co/4w6cq18g/Imagen-de-Whats-App-2025-07-31-a-las-16-16-09-bbcf0581.jpg" alt="Wafle" class="slider-img active" />
+          <img src="https://i.ibb.co/HD5MMxW6/Imagen-de-Whats-App-2025-07-31-a-las-17-09-55-a8748f67.jpg" alt="Wafle 2" class="slider-img" />
+        </div>
+        <h4 class="fabric-name">Wafle</h4>
+        <p class="fabric-description">
+          Tela con textura acanalada en forma de cuadrícula, suave y confortable al tacto. Perfecta para prendas casuales, buzos, joggers y looks relajados con estilo.
+        </p>
+        <button class="contact-btn" data-name="Wafle">Consultar</button>
+      </article>
+
+      <!-- Lino Rayado -->
+      <article class="fabric-card">
+        <div class="fabric-slider">
+          <img src="https://i.ibb.co/MyDJXZhm/Imagen-de-Whats-App-2025-07-31-a-las-16-16-56-7421441d.jpg" alt="Lino Rayado" class="slider-img active" />
+          <img src="https://i.ibb.co/5WJMVBnV/Imagen-de-Whats-App-2025-07-31-a-las-17-42-30-30329274.jpg" alt="Lino Rayado 2" class="slider-img" />
+        </div>
+        <h4 class="fabric-name">Lino Rayado</h4>
+        <p class="fabric-description">
+          Lino liviano con diseño a rayas, ideal para camisas, vestidos y pantalones frescos. Su estilo clásico y natural lo convierte en un must de temporada.
+        </p>
+        <button class="contact-btn" data-name="Lino Rayado">Consultar</button>
+      </article>
+
+      <!-- Cey -->
+      <article class="fabric-card">
+        <div class="fabric-slider">
+          <img src="https://i.ibb.co/xK0Pj39m/Imagen-de-Whats-App-2025-07-31-a-las-16-20-12-c5a560a7.jpg" alt="Cey" class="slider-img active" />
+          <img src="https://i.ibb.co/dJsBBjDw/Imagen-de-Whats-App-2025-07-31-a-las-17-32-46-1891940f.jpg" alt="Cey 2" class="slider-img" />
+        </div>
+        <h4 class="fabric-name">Cey</h4>
+        <p class="fabric-description">
+          Tela ligera y fresca con textura suave, ideal para prendas veraniegas y looks cómodos con estilo casual y natural.
+        </p>
+        <button class="contact-btn" data-name="Cey">Consultar</button>
+      </article>
+
+    </section>
+  </div>
+
+  <!-- Modal para ampliar imágenes -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" />
+    <div class="modal-caption" id="modalCaption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+  </div>
+
+  <footer style="text-align: center; padding: 20px; background-color: #123844; font-size: 14px; color: #d0cfe8;">
+    <p>© 2025 Marcos Duek – Catálogo de Telas</p>
+    <p>Todos los derechos reservados | Calidad que se siente, estilo que perdura</p>
+    <p>Web creada por <strong>Uziel Romano</strong></p>
+    <a href="https://wa.me/541134223812" target="_blank" style="color: #d0cfe8; text-decoration: none;">
+      11 3422 3812
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
