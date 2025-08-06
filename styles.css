@@ -1,0 +1,628 @@
+/* Reset y base */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+header a {
+  color: #edbb58;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, black 40%, #75736f 60%);
+  color: black;
+}
+
+
+/* Contenedor principal que crece */
+.container {
+  flex: 1 0 auto;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #75736f, #2e2d2a);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+  font-size: 2rem;
+  color: #edbb58;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Botón WhatsApp */
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  margin-top: 15px;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* Grid de las tarjetas */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Tarjetas */
+.fabric-card {
+  background: linear-gradient(135deg, rgba(117, 115, 111, 0.9), rgba(46, 45, 42, 0.8));
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 220px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #f5f5f5; /* texto claro para contraste */
+}
+
+
+.fabric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider de imágenes */
+.fabric-slider {
+  position: relative;
+  width: 100%;
+  padding-top: 140%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.slider-img.active {
+  opacity: 1;
+}
+
+.fabric-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+  z-index: 2;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+/* Texto de la tarjeta */
+.fabric-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #edbb58;
+  margin-bottom: 6px;
+}
+
+.fabric-description {
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  font-size: 0.85rem;
+}
+
+.fabric-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+/* Botón consultar */
+.contact-btn {
+    display: block;           /* para que ocupe línea completa */
+    margin: 1rem auto 0 auto; /* arriba 1rem, auto horizontal para centrar */
+    background: linear-gradient(45deg, #75736f, black);
+    color: white;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 0.85rem;
+    max-width: 140px;         /* opcional para no hacerlo muy ancho */
+    text-align: center;
+}
+
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer siempre abajo */
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  text-align: center;
+  padding: 30px 15px;
+  background: linear-gradient(45deg, #75736f, #2e2d2a);
+  color: #f0f0f0;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+footer p:last-child {
+  color: white;
+  font-size: 0.75rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 tarjetas por fila en celular */
+    gap: 10px;
+  }
+
+  .fabric-card {
+    max-width: 100%;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Extra: para pantallas muy angostas (opcional) */
+@media (max-width: 360px) {
+  .catalog-grid {
+    grid-template-columns: 1fr; /* 1 tarjeta por fila si es muy angosta */
+  }
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 25px 0;
+  border-radius: 2px;
+}
+
+/* Modal de imágenes */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.8);
+  user-select: none;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 70vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.modal-caption {
+  margin: 15px auto 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.modal .prev,
+.modal .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 2.5rem;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.modal .prev:hover,
+.modal .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal .prev {
+  left: 10px;
+}
+
+.modal .next {
+  right: 10px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #ccc;
+}
+
+#imageModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: auto;        /* ancho aumentado */
+    margin: 2rem auto 1rem auto; /* margen abajo reducido para separar del botón */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, #1a1a1a, #fff9c4);
+    display: flex;
+    flex-direction: column;  /* para poner imagen arriba y info abajo */
+}
+
+/* Imagen dentro del carrusel */
+.carousel img {
+    width: 100%;
+    height: auto;          /* altura automática para no tapar texto */
+    object-fit: cover;
+    display: none;
+    border-radius: 15px 15px 0 0; /* bordes solo arriba para separar de info */
+    transition: opacity 0.5s ease-in-out;
+    flex-shrink: 0;        /* evitar que la imagen se reduzca */
+}
+
+.carousel img.active {
+    display: block;
+}
+
+/* Contenedor para nombre, descripción y botón */
+.carousel .info {
+    background: #111;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    flex-grow: 1;           /* que ocupe el resto del espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Nombre y descripción */
+.carousel .info h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.carousel .info p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Botón consultar debajo de la descripción */
+.carousel .contact-btn {
+    margin: 1px auto 0 auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    opacity: 0.95;
+    background: linear-gradient(45deg, black, #75736f);
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 60%;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+.carousel .contact-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.7);
+}
+
+/* Flechas y indicadores mantienen estilos previos */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(76,175,80,0.8);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.4rem 0.8rem;
+    border-radius: 50%;
+    user-select: none;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: #388e3c;
+}
+
+.arrow.left {
+    left: 5px;
+}
+
+.arrow.right {
+    right: 5px;
+}
+.section-title {
+  color: #5D4037; /* Cambia este color por el que quieras */
+}
+.carousel .product-info h3 {
+  color: #edbb58;       /* Color marrón oscuro que resalta con el fondo crema */
+  text-align: center;   /* Centrado horizontal */
+  font-size: 2rem;    /* Tamaño opcional */
+  margin: 0.5rem 0;
+}
+.carousel .product-info p {
+  color: white;       /* Otro tono marrón más suave que negro */
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 1rem 0.8rem;
+  line-height: 1.4;
+}
+footer {
+  flex-shrink: 0;
+  margin-top: auto;
+  text-align: center;
+  padding: 30px 15px;
+  background-color: rgba(0, 0, 0, 0.95); /* casi sólido */
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 0;
+  width: 100%;
+}
+.search-container {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+}
+
+#fabricSearch {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  background-color: #fff9c4;  /* fondo amarillo claro */
+  color: #333;                /* texto oscuro para buen contraste */
+  transition: border-color 0.3s ease;
+}
+
+#fabricSearch:focus {
+  border-color: #4caf50; /* verde para que combine */
+  background-color: #fffec8; /* un amarillo un poco más claro al enfocar */
+}
+.whatsapp-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px; /* espacio para desplegable */
+  z-index: 10000; /* asegurar que quede arriba */
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.whatsapp-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+}
+
+.whatsapp-dropdown-content a {
+  color: #25D366;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.whatsapp-dropdown-content a:hover {
+  background-color: #e6f4ea;
+}
+
+/* Mostrar el desplegable al hover o focus para accesibilidad */
+.whatsapp-dropdown:hover .whatsapp-dropdown-content,
+.whatsapp-dropdown:focus-within .whatsapp-dropdown-content {
+  display: block;
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+.whatsapp-float-dropdown {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10000;
+  font-family: Arial, sans-serif;
+}
+
+.whatsapp-float-btn {
+  background-color: #25D366;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float-btn:hover,
+.whatsapp-float-btn:focus {
+  background-color: #128C4A;
+  outline: none;
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.whatsapp-float-dropdown-content {
+  display: none;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 180px;
+  user-select: none;
+}
+
+.whatsapp-float-dropdown-content li a {
+  display: block;
+  padding: 12px 16px;
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.whatsapp-float-dropdown-content li:last-child a {
+  border-bottom: none;
+}
+
+.whatsapp-float-dropdown-content li a:hover,
+.whatsapp-float-dropdown-content li a:focus {
+  background-color: #e6f4ea;
+  outline: none;
+}
