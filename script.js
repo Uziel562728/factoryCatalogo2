@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- NUEVO: Código para el carrusel personalizado ---
   // Productos para el carrusel con su info
- const productos = [
+const productos = [
   {
     nombre: "Lino Sastrero",
     descripcion: "Elegante y fresco, el lino sastrero combina la naturalidad del lino con la estructura ideal para prendas formales de verano. Ideal para trajes livianos, blazers y pantalones con caída impecable."
@@ -59,7 +59,40 @@ document.addEventListener('DOMContentLoaded', () => {
   {
     nombre: "Wafle",
     descripcion: "Tela con textura acanalada en forma de cuadrícula, suave y confortable al tacto. Perfecta para prendas casuales, buzos, joggers y looks relajados con estilo."
-  }
+  },
+   { 
+  nombre: "Barbie Sastrero",
+  descripcion: "Tela con cuerpo y caída elegante, ideal para sastrería moderna y prendas estructuradas con un acabado sofisticado."
+},
+{ 
+  nombre: "Rústico",
+  descripcion: "Tela resistente y con textura marcada, ideal para prendas informales, cómodas y con estilo natural."
+},
+{ 
+  nombre: "Morley KLM",
+  descripcion: "Tela suave con textura tipo morley y acabado elegante, ideal para prendas modernas, cómodas y con caída impecable."
+},
+{ 
+  nombre: "Viscosa Airflow",
+  descripcion: "Tela ligera y fluida, ideal para prendas frescas y cómodas. Perfecta para vestidos, blusas y camisas con caída natural y elegante."
+},
+{ 
+  nombre: "Lino Cuadrille",
+  descripcion: "Lino con diseño cuadriculado, fresco y elegante, ideal para prendas de verano con estilo clásico y sofisticado."
+},
+{ 
+  nombre: "Cuerina",
+  descripcion: "Cuerina suave y resistente, ideal para confeccionar chaquetas, accesorios y detalles de moda con estilo urbano y moderno."
+},
+{ 
+  nombre: "Lino Jaspeado",
+  descripcion: "Lino jaspeado con textura ligera y sofisticada, perfecto para camisas, vestidos y pantalones frescos de estilo elegante y natural."
+},
+{ 
+  nombre: "Twil Lolis",
+  descripcion: "Twil suave y ligero con caída elegante, ideal para blusas, vestidos y prendas cómodas con un toque sofisticado."
+},
+
 ];
 
 
