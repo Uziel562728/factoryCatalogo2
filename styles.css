@@ -27,9 +27,10 @@ body {
 /* Contenedor principal que crece */
 .container {
   flex: 1 0 auto;
-  max-width: 480px;
+  max-width: none;     ← CAMBIA 480px por none
+  width: 100%;         ← AGREGA ESTA LÍNEA
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;       ← CAMBIA 20px por 10px
 }
 
 /* Header */
@@ -99,7 +100,7 @@ h1 {
   padding: 10px;
   text-align: center;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  max-width: 220px;
+  width: 100%; 
   margin: 0 auto;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -625,4 +626,28 @@ footer {
 .whatsapp-float-dropdown-content li a:focus {
   background-color: #e6f4ea;
   outline: none;
+}
+/* AGREGAR AL FINAL DEL ARCHIVO */
+@media (max-width: 480px) {
+  .container {
+    padding: 5px;
+    max-width: none;
+    width: 100%;
+  }
+  
+  .catalog-grid {
+    gap: 8px;
+  }
+  
+  .fabric-card {
+    width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
