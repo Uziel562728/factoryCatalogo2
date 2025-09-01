@@ -49,10 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Productos para el carrusel con su info
 const productos = [
   {
-    nombre: "Lino Sastrero",
-    descripcion: "Elegante y fresco, el lino sastrero combina la naturalidad del lino con la estructura ideal para prendas formales de verano. Ideal para trajes livianos, blazers y pantalones con caída impecable."
-  },
-  {
     nombre: "Morley Suede",
     descripcion: "Tela con textura acanalada tipo morley y acabado tipo gamuza. Suave, elástica y elegante, ideal para prendas modernas, cómodas y con un toque sofisticado."
   },
